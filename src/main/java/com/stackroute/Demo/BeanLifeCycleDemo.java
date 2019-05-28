@@ -10,7 +10,6 @@ public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
     public void destroy() throws Exception {
         System.out.println("destroying the bean using disposable bean interface");
     }
-
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("initializing the bean using initializing bean interface");

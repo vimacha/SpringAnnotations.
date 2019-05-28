@@ -37,7 +37,7 @@ public class SpringBeanConfiguration {
         return new BeanNameAwareDemo();
     }
 
-    /*BeanLifeCycleDemo */
+    /*BeanLifeCycleDemo...*/
     @Bean(name={"beanLifecycleDemoBean"}, initMethod="customInit",destroyMethod = "customDestroy")
     public BeanLifeCycleDemo getBeanLifecycleDemoBean(){
         return new BeanLifeCycleDemo();
