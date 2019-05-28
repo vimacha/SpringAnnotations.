@@ -2,6 +2,7 @@ package com.stackroute.config;
 
 import com.stackroute.Actor;
 import com.stackroute.Demo.BeanLifeCycleDemo;
+import com.stackroute.Demo.BeanPostProcessorDemo;
 import com.stackroute.Movie;
 import com.stackroute.awareInterface.ApplicationContextAwareDemo;
 import com.stackroute.awareInterface.BeanFactoryAwareDemo;
@@ -41,6 +42,12 @@ public class SpringBeanConfiguration {
     @Bean(name={"beanLifecycleDemoBean"}, initMethod="customInit",destroyMethod = "customDestroy")
     public BeanLifeCycleDemo getBeanLifecycleDemoBean(){
         return new BeanLifeCycleDemo();
+    }
+
+    /* BeanPostProcessor..*/
+    @Bean(name="beanPostProcessorDemoBean")
+    public BeanPostProcessorDemo getBeanPostProcessorDemoBean(){
+        return new BeanPostProcessorDemo();
     }
 
 
