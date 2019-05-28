@@ -1,6 +1,7 @@
 package com.stackroute.config;
 
 import com.stackroute.Actor;
+import com.stackroute.Demo.BeanLifeCycleDemo;
 import com.stackroute.Movie;
 import com.stackroute.awareInterface.ApplicationContextAwareDemo;
 import com.stackroute.awareInterface.BeanFactoryAwareDemo;
@@ -34,6 +35,12 @@ public class SpringBeanConfiguration {
     @Bean(name="beanNameAwareDemo")
     public BeanNameAwareDemo getBeanNameAwareDemo(){
         return new BeanNameAwareDemo();
+    }
+
+    /*BeanLifeCycleDemo */
+    @Bean(name={"beanLifecycleDemoBean"}, initMethod="customInit",destroyMethod = "customDestroy")
+    public BeanLifeCycleDemo getBeanLifecycleDemoBean(){
+        return new BeanLifeCycleDemo();
     }
 
 
